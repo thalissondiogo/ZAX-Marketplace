@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAX — Marketplace de Confiança | Compras Seguras e Acessíveis</title>
+    <meta name="description" content="ZAX Marketplace - Produtos incríveis com preços acessíveis. Compra 100% segura, frete grátis acima de R$199, devolução garantida em 7 dias.">
+    <meta name="keywords" content="ZAX, marketplace, compras online, e-commerce, produtos baratos, frete grátis">
+    <meta name="author" content="ZAX E-commerce">
+    <meta property="og:title" content="ZAX — Marketplace de Confiança">
+    <meta property="og:description" content="Produtos incríveis com preços acessíveis. Compra segura e frete grátis.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0052FF">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SVG Sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="icon-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </symbol>
+        <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </symbol>
+        <symbol id="icon-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+            <path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+        </symbol>
+        <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+        </symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+        </symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+        </symbol>
+        <symbol id="icon-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.63 4.4 2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.97-.97a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+        </symbol>
+        <symbol id="icon-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+        </symbol>
+        <symbol id="icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+        </symbol>
+        <symbol id="icon-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </symbol>
+        <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </symbol>
+        <symbol id="icon-star-empty" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </symbol>
+        <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </symbol>
+        <symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+        </symbol>
+        <symbol id="icon-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+        </symbol>
+        <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </symbol>
+        <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </symbol>
+        <symbol id="icon-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+        </symbol>
+        <symbol id="icon-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+        </symbol>
+        <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </symbol>
+        <symbol id="icon-filter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+        </symbol>
+        <symbol id="icon-trending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+        </symbol>
+        <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </symbol>
+        <symbol id="icon-twitter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </symbol>
+        <symbol id="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+        </symbol>
+        <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </symbol>
+        <symbol id="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+        </symbol>
+    </svg>
+
+    <!-- ═══ TRUST BAR ═══ -->
+    <div class="trust-bar" role="marquee" aria-label="Informações de confiança">
+        <div class="trust-bar-inner">
+            <div class="trust-bar-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-shield"/></svg>
+                <span data-i18n="trustbar.secure">Compra 100% Segura</span>
+            </div>
+            <div class="trust-bar-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-truck"/></svg>
+                <span data-i18n="trustbar.shipping">Frete Grátis acima de R$199</span>
+            </div>
+            <div class="trust-bar-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-refresh"/></svg>
+                <span data-i18n="trustbar.return">Devolução em até 7 dias</span>
+            </div>
+            <div class="trust-bar-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-award"/></svg>
+                <span data-i18n="trustbar.quality">Qualidade Garantida</span>
+            </div>
+            <div class="trust-bar-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-shield"/></svg>
+                <span data-i18n="trustbar.secure">Compra 100% Segura</span>
+            </div>
+            <div class="trust-bar-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-truck"/></svg>
+                <span data-i18n="trustbar.shipping">Frete Grátis acima de R$199</span>
+            </div>
+            <div class="trust-bar-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-refresh"/></svg>
+                <span data-i18n="trustbar.return">Devolução em até 7 dias</span>
+            </div>
+            <div class="trust-bar-item">
+                <svg class="icon" aria-hidden="true"><use href="#icon-award"/></svg>
+                <span data-i18n="trustbar.quality">Qualidade Garantida</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header" id="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo" aria-label="ZAX Marketplace — página inicial">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">ZAX</span>
+                    <span class="logo-tag">MARKETPLACE</span>
+                </a>
+                <nav class="nav-desktop" aria-label="Navegação principal">
+                    <ul role="list">
+                        <li><a href="#home" data-i18n="nav.home">Início</a></li>
+                        <li><a href="#produtos" data-i18n="nav.products">Produtos</a></li>
+                        <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+                        <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <!-- Language/Currency Selector -->
+                    <div class="locale-selector" id="localeSelector">
+                        <button class="locale-btn" id="localeBtn" aria-label="Idioma e moeda" aria-haspopup="true" aria-expanded="false">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-globe"/></svg>
+                            <span id="localeBtnLabel">🇧🇷 PT · R$</span>
+                        </button>
+                        <div class="locale-dropdown" id="localeDropdown" role="menu" aria-hidden="true">
+                            <div class="locale-group">
+                                <span class="locale-group-title" data-i18n="locale.language">Idioma</span>
+                                <button class="locale-option active" data-lang="pt-BR" role="menuitem">🇧🇷 Português</button>
+                                <button class="locale-option" data-lang="en" role="menuitem">🇺🇸 English</button>
+                                <button class="locale-option" data-lang="es" role="menuitem">🇪🇸 Español</button>
+                            </div>
+                            <div class="locale-group">
+                                <span class="locale-group-title" data-i18n="locale.currency">Moeda</span>
+                                <button class="locale-option active" data-currency="BRL" role="menuitem">🇧🇷 R$ Real</button>
+                                <button class="locale-option" data-currency="USD" role="menuitem">🇺🇸 $ Dollar</button>
+                                <button class="locale-option" data-currency="EUR" role="menuitem">🇪🇺 € Euro</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dark Mode Toggle -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema escuro">
+                        <svg class="icon icon-sun" aria-hidden="true"><use href="#icon-sun"/></svg>
+                        <svg class="icon icon-moon" aria-hidden="true"><use href="#icon-moon"/></svg>
+                    </button>
+                    <!-- Wishlist -->
+                    <button class="action-btn wishlist-btn" id="wishlistBtn" aria-label="Lista de desejos">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-heart"/></svg>
+                        <span class="action-count" id="wishlistCount">0</span>
+                    </button>
+                    <!-- Cart -->
+                    <button class="cart-btn" id="cartBtn" onclick="toggleCart()" aria-label="Abrir carrinho de compras" aria-haspopup="dialog">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-cart"/></svg>
+                        <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <main id="main-content">
+
+        <!-- ── Hero Section ── -->
+        <section id="home" class="hero" aria-labelledby="hero-heading">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-gradient"></div>
+                <div class="hero-particles"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge-row">
+                        <span class="hero-badge pulse" data-i18n="hero.badge">🔥 Ofertas de até 50% OFF</span>
+                    </div>
+                    <h1 id="hero-heading" data-i18n="hero.title">
+                        Seu marketplace<br>de <span class="text-gradient">confiança</span>
+                    </h1>
+                    <p class="hero-sub" data-i18n="hero.subtitle">Descubra milhares de produtos com preços incríveis, entrega rápida e compra 100% segura. Sua satisfação é nossa prioridade.</p>
+                    <div class="search-container" role="search">
+                        <label for="searchInput" class="sr-only">Buscar produtos</label>
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Buscar produtos, marcas e categorias..."
+                            aria-label="Buscar produtos"
+                            autocomplete="off"
+                        >
+                        <div class="search-suggestions" id="searchSuggestions" aria-hidden="true"></div>
+                        <button class="search-btn" onclick="searchProducts()" aria-label="Buscar">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg>
+                        </button>
+                    </div>
+                    <!-- Trust Signals -->
+                    <div class="hero-trust" aria-label="Selos de confiança">
+                        <div class="hero-trust-item">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-shield"/></svg>
+                            <span data-i18n="hero.trust.secure">Compra Segura</span>
+                        </div>
+                        <div class="hero-trust-item">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-truck"/></svg>
+                            <span data-i18n="hero.trust.shipping">Frete Grátis</span>
+                        </div>
+                        <div class="hero-trust-item">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-refresh"/></svg>
+                            <span data-i18n="hero.trust.returns">7 Dias Devolução</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Categories ── -->
+        <section class="categories-section" aria-labelledby="categories-heading">
+            <div class="container">
+                <h2 id="categories-heading" class="sr-only">Categorias</h2>
+                <div class="categories-grid" id="categoriesGrid">
+                    <button class="category-card" data-category="eletronicos" onclick="filterByCategory('eletronicos')">
+                        <div class="category-icon">📱</div>
+                        <span data-i18n="cat.electronics">Eletrônicos</span>
+                    </button>
+                    <button class="category-card" data-category="moda" onclick="filterByCategory('moda')">
+                        <div class="category-icon">👟</div>
+                        <span data-i18n="cat.fashion">Moda</span>
+                    </button>
+                    <button class="category-card" data-category="casa" onclick="filterByCategory('casa')">
+                        <div class="category-icon">🏠</div>
+                        <span data-i18n="cat.home">Casa</span>
+                    </button>
+                    <button class="category-card" data-category="acessorios" onclick="filterByCategory('acessorios')">
+                        <div class="category-icon">⌚</div>
+                        <span data-i18n="cat.accessories">Acessórios</span>
+                    </button>
+                    <button class="category-card highlight" onclick="filterByCategory('all')">
+                        <div class="category-icon">🔥</div>
+                        <span data-i18n="cat.all">Todos</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Featured Products Carousel ── -->
+        <section class="featured-section" aria-labelledby="featured-heading">
+            <div class="container">
+                <div class="section-title-block">
+                    <div class="section-title-row">
+                        <div>
+                            <h2 id="featured-heading" data-i18n="featured.title">🔥 Produtos em Destaque</h2>
+                            <p data-i18n="featured.subtitle">Selecionados especialmente para você</p>
+                        </div>
+                        <a href="#produtos" class="see-all-link" data-i18n="featured.seeAll">Ver todos →</a>
+                    </div>
+                </div>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Produto anterior">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-chevron-left"/></svg>
+                    </button>
+                    <div class="carousel-track-container" aria-live="polite" aria-atomic="false">
+                        <div class="carousel" id="featuredCarousel" role="list"></div>
+                    </div>
+                    <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Próximo produto">
+                        <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Products Section ── -->
+        <section id="produtos" class="products-section" aria-labelledby="products-heading">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title-block">
+                        <h2 id="products-heading" data-i18n="products.title">Nossos Produtos</h2>
+                        <p data-i18n="products.subtitle">Qualidade e preço justo em cada item</p>
+                    </div>
+                    <div class="filters-row">
+                        <div class="category-filters" role="group" aria-label="Filtrar por categoria">
+                            <button class="filter-btn active" onclick="filterProducts('all', event)" data-i18n="filter.all">Todos</button>
+                            <button class="filter-btn" onclick="filterProducts('eletronicos', event)" data-i18n="filter.electronics">Eletrônicos</button>
+                            <button class="filter-btn" onclick="filterProducts('moda', event)" data-i18n="filter.fashion">Moda</button>
+                            <button class="filter-btn" onclick="filterProducts('casa', event)" data-i18n="filter.home">Casa</button>
+                            <button class="filter-btn" onclick="filterProducts('acessorios', event)" data-i18n="filter.accessories">Acessórios</button>
+                        </div>
+                        <div class="sort-controls">
+                            <label for="sortSelect" class="sr-only">Ordenar por</label>
+                            <select id="sortSelect" class="sort-select" onchange="sortProducts(this.value)" aria-label="Ordenar produtos">
+                                <option value="featured" data-i18n="sort.featured">Destaques</option>
+                                <option value="price-asc" data-i18n="sort.priceAsc">Menor Preço</option>
+                                <option value="price-desc" data-i18n="sort.priceDesc">Maior Preço</option>
+                                <option value="rating" data-i18n="sort.rating">Avaliação</option>
+                                <option value="bestseller" data-i18n="sort.bestseller">Mais Vendidos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-grid" id="productsGrid" aria-live="polite" aria-label="Lista de produtos"></div>
+            </div>
+        </section>
+
+        <!-- ── Loyalty Section ── -->
+        <section class="loyalty-section" aria-labelledby="loyalty-heading">
+            <div class="container">
+                <div class="loyalty-card">
+                    <div class="loyalty-content">
+                        <div class="loyalty-badge">
+                            <svg class="icon-lg" aria-hidden="true"><use href="#icon-award"/></svg>
+                        </div>
+                        <div class="loyalty-text">
+                            <h2 id="loyalty-heading" data-i18n="loyalty.title">ZAX Points — Programa de Fidelidade</h2>
+                            <p data-i18n="loyalty.description">Ganhe pontos a cada compra e suba de nível. Quanto mais alto seu nível, maiores seus descontos exclusivos!</p>
+                        </div>
+                    </div>
+                    <div class="loyalty-levels">
+                        <div class="loyalty-level" data-level="bronze">
+                            <span class="level-icon">🥉</span>
+                            <span class="level-name">Bronze</span>
+                            <span class="level-benefit">0 pts</span>
+                        </div>
+                        <div class="loyalty-progress-bar"><div class="loyalty-progress-fill" id="loyaltyProgress"></div></div>
+                        <div class="loyalty-level" data-level="silver">
+                            <span class="level-icon">🥈</span>
+                            <span class="level-name">Prata</span>
+                            <span class="level-benefit">5% OFF</span>
+                        </div>
+                        <div class="loyalty-progress-bar"><div class="loyalty-progress-fill"></div></div>
+                        <div class="loyalty-level" data-level="gold">
+                            <span class="level-icon">🥇</span>
+                            <span class="level-name">Ouro</span>
+                            <span class="level-benefit">10% OFF</span>
+                        </div>
+                        <div class="loyalty-progress-bar"><div class="loyalty-progress-fill"></div></div>
+                        <div class="loyalty-level" data-level="diamond">
+                            <span class="level-icon">💎</span>
+                            <span class="level-name">Diamante</span>
+                            <span class="level-benefit">15% OFF</span>
+                        </div>
+                    </div>
+                    <div class="loyalty-stats" id="loyaltyStats">
+                        <div class="loyalty-stat">
+                            <span class="stat-value" id="loyaltyPoints">0</span>
+                            <span class="stat-label" data-i18n="loyalty.points">Seus Pontos</span>
+                        </div>
+                        <div class="loyalty-stat">
+                            <span class="stat-value" id="loyaltyLevel">🥉 Bronze</span>
+                            <span class="stat-label" data-i18n="loyalty.level">Seu Nível</span>
+                        </div>
+                        <div class="loyalty-stat">
+                            <span class="stat-value" id="loyaltyNext">500 pts</span>
+                            <span class="stat-label" data-i18n="loyalty.next">Próximo Nível</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── About Section ── -->
+        <section id="sobre" class="about-section" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="about-content">
+                    <div class="section-title-block centered">
+                        <h2 id="about-heading" data-i18n="about.title">Por que escolher a ZAX?</h2>
+                        <p data-i18n="about.subtitle">Mais do que um marketplace, uma experiência de confiança</p>
+                    </div>
+                    <div class="features" role="list">
+                        <div class="feature" role="listitem">
+                            <div class="feature-icon" aria-hidden="true">
+                                <svg class="icon-lg"><use href="#icon-shield"/></svg>
+                            </div>
+                            <h3 data-i18n="about.secure.title">Compra 100% Segura</h3>
+                            <p data-i18n="about.secure.desc">Dados protegidos com criptografia de ponta. Certificação SSL e PCI DSS.</p>
+                        </div>
+                        <div class="feature" role="listitem">
+                            <div class="feature-icon" aria-hidden="true">
+                                <svg class="icon-lg"><use href="#icon-truck"/></svg>
+                            </div>
+                            <h3 data-i18n="about.delivery.title">Entrega Rápida</h3>
+                            <p data-i18n="about.delivery.desc">Frete grátis acima de R$199. Rastreamento em tempo real do seu pedido.</p>
+                        </div>
+                        <div class="feature" role="listitem">
+                            <div class="feature-icon" aria-hidden="true">
+                                <svg class="icon-lg"><use href="#icon-refresh"/></svg>
+                            </div>
+                            <h3 data-i18n="about.return.title">Devolução Fácil</h3>
+                            <p data-i18n="about.return.desc">7 dias para devolver sem burocracia. Reembolso garantido.</p>
+                        </div>
+                        <div class="feature" role="listitem">
+                            <div class="feature-icon" aria-hidden="true">
+                                <svg class="icon-lg"><use href="#icon-award"/></svg>
+                            </div>
+                            <h3 data-i18n="about.quality.title">Qualidade Verificada</h3>
+                            <p data-i18n="about.quality.desc">Todos os vendedores são verificados. Produtos com selo de qualidade ZAX.</p>
+                        </div>
+                        <div class="feature" role="listitem">
+                            <div class="feature-icon" aria-hidden="true">
+                                <svg class="icon-lg"><use href="#icon-target"/></svg>
+                            </div>
+                            <h3 data-i18n="about.ai.title">Recomendações com IA</h3>
+                            <p data-i18n="about.ai.desc">Produtos selecionados especialmente para seu perfil de compras.</p>
+                        </div>
+                        <div class="feature" role="listitem">
+                            <div class="feature-icon" aria-hidden="true">
+                                <svg class="icon-lg"><use href="#icon-zap"/></svg>
+                            </div>
+                            <h3 data-i18n="about.support.title">Suporte 24/7</h3>
+                            <p data-i18n="about.support.desc">Atendimento via WhatsApp, chat e e-mail sempre que precisar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Contact Section ── -->
+        <section id="contato" class="contact-section" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="section-title-block centered">
+                    <h2 id="contact-heading" data-i18n="contact.title">Entre em Contato</h2>
+                    <p data-i18n="contact.subtitle">Estamos sempre prontos para ajudar</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3 data-i18n="contact.talk">Fale Conosco</h3>
+                        <p data-i18n="contact.talkDesc">Estamos aqui para ajudar! Entre em contato através dos nossos canais de atendimento.</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg class="icon-md"><use href="#icon-whatsapp"/></svg>
+                                </span>
+                                <div>
+                                    <strong>WhatsApp</strong>
+                                    <p>(11) 99999-9999</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg class="icon-md"><use href="#icon-mail"/></svg>
+                                </span>
+                                <div>
+                                    <strong>E-mail</strong>
+                                    <p>contato@zax.com.br</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <h4 data-i18n="contact.social">Siga-nos</h4>
+                            <div class="social-icons">
+                                <a href="https://instagram.com/zaxecommerce" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                                    <svg class="icon"><use href="#icon-instagram"/></svg>
+                                </a>
+                                <a href="https://facebook.com/zaxecommerce" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                                    <svg class="icon"><use href="#icon-facebook"/></svg>
+                                </a>
+                                <a href="https://x.com/zaxecommerce" target="_blank" rel="noopener" class="social-link" aria-label="X/Twitter">
+                                    <svg class="icon"><use href="#icon-twitter"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" onsubmit="submitContactForm(event)" novalidate>
+                        <h3 data-i18n="contact.send">Envie uma Mensagem</h3>
+                        <div class="form-group">
+                            <label for="contact-name" data-i18n="contact.name">Nome</label>
+                            <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email" data-i18n="contact.email">E-mail</label>
+                            <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message" data-i18n="contact.message">Mensagem</label>
+                            <textarea id="contact-message" name="message" rows="5" required placeholder="Como podemos ajudar?"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" data-i18n="contact.submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Newsletter ── -->
+        <section class="newsletter-section" aria-labelledby="newsletter-heading">
+            <div class="container">
+                <div class="newsletter-card">
+                    <div class="newsletter-content">
+                        <h2 id="newsletter-heading" data-i18n="newsletter.title">📬 Receba ofertas exclusivas</h2>
+                        <p data-i18n="newsletter.desc">Cadastre-se e ganhe 10% OFF na primeira compra + ofertas antecipadas.</p>
+                    </div>
+                    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                        <label for="newsletterEmail" class="sr-only">Seu melhor e-mail</label>
+                        <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+                        <button type="submit" class="newsletter-btn" data-i18n="newsletter.btn">Quero 10% OFF</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">ZAX</span>
+                    </div>
+                    <p data-i18n="footer.desc">Seu marketplace de confiança. Produtos incríveis, preços acessíveis e compra 100% segura.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/zaxecommerce" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#icon-instagram"/></svg></a>
+                        <a href="https://facebook.com/zaxecommerce" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon"><use href="#icon-facebook"/></svg></a>
+                        <a href="https://x.com/zaxecommerce" target="_blank" rel="noopener" aria-label="Twitter"><svg class="icon"><use href="#icon-twitter"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.shop">Loja</h4>
+                    <nav aria-label="Links da loja">
+                        <a href="#produtos" data-i18n="nav.products">Produtos</a>
+                        <a href="#home" data-i18n="footer.offers">Ofertas</a>
+                        <a href="#home" data-i18n="footer.new">Novidades</a>
+                        <a href="#home" data-i18n="footer.bestsellers">Mais Vendidos</a>
+                    </nav>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.help">Ajuda</h4>
+                    <nav aria-label="Links de ajuda">
+                        <a href="#contato" data-i18n="footer.faq">FAQ</a>
+                        <a href="#contato" data-i18n="footer.shipping">Entrega</a>
+                        <a href="#contato" data-i18n="footer.returns">Devoluções</a>
+                        <a href="#contato" data-i18n="footer.contactUs">Fale Conosco</a>
+                    </nav>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.company">Empresa</h4>
+                    <nav aria-label="Links da empresa">
+                        <a href="#sobre" data-i18n="nav.about">Sobre</a>
+                        <a href="#contato" data-i18n="footer.careers">Carreiras</a>
+                        <a href="#contato" data-i18n="footer.privacy">Privacidade</a>
+                        <a href="#contato" data-i18n="footer.terms">Termos</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="footerYear"></span> ZAX Marketplace. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+                <div class="footer-trust-badges">
+                    <span class="trust-badge-small">🔒 SSL</span>
+                    <span class="trust-badge-small">✅ Verificado</span>
+                    <span class="trust-badge-small">🛡️ Seguro</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══ CART SIDEBAR ═══ -->
+    <aside class="cart-sidebar" id="cartSidebar" role="dialog" aria-modal="true" aria-label="Carrinho de compras">
+        <div class="cart-header">
+            <h2 class="cart-title" data-i18n="cart.title">Seu Carrinho</h2>
+            <button class="close-cart" onclick="toggleCart()" aria-label="Fechar carrinho">
+                <svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg>
+            </button>
+        </div>
+        <!-- Free Shipping Bar -->
+        <div class="free-shipping-bar" id="freeShippingBar">
+            <div class="free-shipping-progress">
+                <div class="free-shipping-fill" id="freeShippingFill"></div>
+            </div>
+            <p class="free-shipping-text" id="freeShippingText" data-i18n="cart.freeShipping">
+                Faltam <strong>R$ 199,00</strong> para frete grátis! 🚚
+            </p>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <svg class="empty-cart-icon" aria-hidden="true"><use href="#icon-cart"/></svg>
+                    <p data-i18n="cart.empty">Seu carrinho está vazio</p>
+                    <span class="empty-cart-hint" data-i18n="cart.emptyHint">Adicione produtos para continuar</span>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span data-i18n="cart.total">Total</span>
+                    <strong><span id="cartCurrencySymbol">R$</span> <span id="cartTotal">0,00</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="checkout()" disabled aria-disabled="true">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+                    <span data-i18n="cart.checkout">Finalizar via WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()" aria-hidden="true"></div>
+
+    <!-- ═══ REVIEW MODAL ═══ -->
+    <div class="modal-overlay" id="reviewModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reviewModalTitle">
+        <div class="modal-content review-modal">
+            <div class="modal-header">
+                <h3 id="reviewModalTitle" data-i18n="review.title">Avaliações do Produto</h3>
+                <button class="modal-close" onclick="closeReviewModal()" aria-label="Fechar">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg>
+                </button>
+            </div>
+            <div class="modal-body" id="reviewModalBody">
+                <!-- Reviews content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ PRODUCT QUICK VIEW MODAL ═══ -->
+    <div class="modal-overlay" id="quickViewModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle">
+        <div class="modal-content quickview-modal">
+            <button class="modal-close" onclick="closeQuickView()" aria-label="Fechar">
+                <svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg>
+            </button>
+            <div class="quickview-body" id="quickViewBody">
+                <!-- Quick view content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ MOBILE NAVIGATION ═══ -->
+    <nav class="mobile-nav" aria-label="Navegação móvel">
+        <button class="nav-btn" onclick="scrollToSection('home')" aria-label="Ir para início">
+            <svg class="icon" aria-hidden="true"><use href="#icon-home"/></svg>
+            <span class="nav-label" data-i18n="nav.home">Início</span>
+        </button>
+        <button class="nav-btn" onclick="scrollToSection('produtos')" aria-label="Ver produtos">
+            <svg class="icon" aria-hidden="true"><use href="#icon-box"/></svg>
+            <span class="nav-label" data-i18n="nav.products">Produtos</span>
+        </button>
+        <button class="nav-btn cart-nav-btn" onclick="toggleCart()" aria-label="Abrir carrinho">
+            <svg class="icon" aria-hidden="true"><use href="#icon-cart"/></svg>
+            <span class="nav-label" data-i18n="nav.cart">Carrinho</span>
+            <span class="mobile-cart-count" id="mobileCartCount" aria-live="polite">0</span>
+        </button>
+        <button class="nav-btn" onclick="scrollToSection('contato')" aria-label="Entrar em contato">
+            <svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>
+            <span class="nav-label" data-i18n="nav.contact">Contato</span>
+        </button>
+    </nav>
+
+    <!-- ═══ WhatsApp FAB ═══ -->
+    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="whatsapp-fab" id="whatsappFab" aria-label="Falar pelo WhatsApp">
+        <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+        <span class="fab-tooltip" data-i18n="fab.whatsapp">Fale conosco</span>
+    </a>
+
+    <!-- ═══ Loading ═══ -->
+    <div class="loading" id="loading" role="status" aria-live="polite" aria-label="Carregando">
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <p data-i18n="ui.loading">Carregando...</p>
+    </div>
+
+    <!-- ═══ Toast Notifications ═══ -->
+    <div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true" role="alert"></div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/products-data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
